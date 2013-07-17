@@ -18,7 +18,7 @@ class CitiBike
   end
   
   def find_by_id(id)
-    @stations.find { |station| station.id = id }
+    @stations.find { |station| station.id == id }
   end
   
   def find_avail_bike_stations(n = 5)
@@ -37,24 +37,23 @@ class CitiBike
     dests = find_nearest_avail_station_locations(coords) # pull out 5 nearest using lat-long calcuations
     params = build_dmatrix_params(dests, coords)
     url = build_dmatrix_url(params)
-    p url
+    p url #debug
     results = JSON.parse(RestClient.get(url))
-    seconds = parse_results_into_distance_array(results)
+    meters = parse_results_into_distance_array(results)
     
-    mintime = 999999999
+    minlength = 999999999
     destindex = -1
-    seconds.each_with_index do |time, index|
-      destindex = index if time < mintime
+    meters.each_with_index do |length, index|
+      destindex, minlength = index, length if length < minlength
     end
 
-    find_by_id(dests[destindex][2])
-    
+    find_by_id(dests[destindex][2])    
   end
   
   def parse_results_into_distance_array(results)
     results["rows"][0]["elements"].map do |element|
       element["distance"]["value"]
-    end    
+    end
   end
   
   def distance(start,finish)
@@ -67,8 +66,8 @@ class CitiBike
   
   def find_nearest_avail_station_locations(coords, n = 5)
     locs = station_locations_with_ids(find_avail_bike_stations)
-    locs.sort_by { |rack| distance(coords,rack[0..1]) }
-    locs[0...n]
+    sorted_locs = locs.sort_by { |rack| distance(coords,rack[0..1]) }
+    sorted_locs[0...n]
   end
   
   def build_dmatrix_url(qv_hash)
@@ -82,9 +81,12 @@ class CitiBike
   
   def build_dmatrix_params(dests, coords)    
     dest_str = dests.map { |lat, long, id| "#{lat},#{long}" }.join("|")
-    p dest_str
+    p dest_str #debug
     orig_str = coords.join(",")
-    { destinations: dest_str, origins: orig_str, sensor: false, mode: "walking" }
+    { destinations: dest_str, 
+      origins:      orig_str, 
+      sensor:       false, 
+      mode:         "walking" }
     
   end
 end
