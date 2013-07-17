@@ -31,10 +31,24 @@ class CitiBike
   end
   
   def find_nearest_avail_bike(coords)
-    # first pull out 3-10 nearest using lat-long calcuations
+    find_nearest_avail_station_locations(coords) # pull out 5 nearest using lat-long calcuations
+    
     # then use maps API to see which is actually nearest for walking
-        # this saves you from having to do 347 API calls
+    # this saves you from having to do 347 API calls
   end
   
+  def distance(start,finish)
+    x1, y1 = start
+    x2, y2 = finish
+    dx = x2 - x1
+    dy = y2 - y1
+    Math.sqrt(dx**2 + dy**2)
+  end
+  
+  def find_nearest_avail_station_locations(coords, n = 5)
+    locs = station_locations(find_avail_bike_stations)
+    locs.sort_by { |rack| distance(coords,rack) }
+    locs[0...n]
+  end
   
 end
