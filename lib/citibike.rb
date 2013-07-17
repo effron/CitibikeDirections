@@ -2,13 +2,14 @@ require 'citibikenyc'
 require 'json'
 require 'addressable/uri'
 require 'rest-client'
-
+require_relative 'distance_matrix_helper'
 # Eventually should give combination walking/biking directions around NYC.
 # Walk to nearest available citibike
 # Bike to stations with available docks nearest to destination
 # Walk from that station to destination
 
 class CitiBike
+  include DistanceMatrixHelper
   
   attr_reader :client, :stations, :avail_bike_stations, :avail_dock_stations
   
@@ -84,31 +85,10 @@ class CitiBike
       sorted_locs = locs.sort_by { |rack| distance(coords,rack[0..1]) }
       sorted_locs[0...n]
     end
-  
-    def build_dmatrix_url(qv_hash)
-      Addressable::URI.new(
-      scheme: "http",
-      host: "www.google.com",
-      path: "maps/api/distancematrix/json",
-      query_values: qv_hash
-      ).to_s
-    end
-  
-    def build_dmatrix_params(dests, coords)    
-      dest_str = dests.map { |lat, long, id| "#{lat},#{long}" }.join("|")
-      p dest_str #debug
-      orig_str = coords.join(",")
-      { destinations: dest_str, 
-        origins:      orig_str, 
-        sensor:       false, 
-        mode:         "walking" }    
-    end  
-  
+    
     def distance(start,finish)
-      x1, y1 = start
-      x2, y2 = finish
-      dx = x2 - x1
-      dy = y2 - y1
+      dx, dy = finish[0] - start[0], finish[1] - start[1] 
+
       Math.sqrt(dx**2 + dy**2)
     end
   
