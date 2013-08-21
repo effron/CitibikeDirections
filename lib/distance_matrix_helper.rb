@@ -1,4 +1,5 @@
 module DistanceMatrixHelper
+  
   def build_dmatrix_url(qv_hash)
     Addressable::URI.new(
     scheme: "http",
@@ -17,4 +18,5 @@ module DistanceMatrixHelper
       sensor:       false, 
       mode:         "walking" }    
   end
+
 end

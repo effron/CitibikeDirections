@@ -2,6 +2,8 @@ require 'citibikenyc'
 require 'json'
 require 'addressable/uri'
 require 'rest-client'
+require 'geocoder'
+require_relative 'helper_methods'
 require_relative 'distance_matrix_helper'
 # Eventually should give combination walking/biking directions around NYC.
 # Walk to nearest available citibike
@@ -9,6 +11,7 @@ require_relative 'distance_matrix_helper'
 # Walk from that station to destination
 
 class CitiBike
+  include HelperMethods
   include DistanceMatrixHelper
   
   attr_reader :client, :stations, :avail_bike_stations, :avail_dock_stations
@@ -31,11 +34,13 @@ class CitiBike
     stations.select{ |station| station.availableDocks > n }
   end
   
-  def find_nearest_avail_bike(coords)
+  def find_nearest_avail_bike(address)
+    coords = address_to_lat_lng(address)
     find_nearest_avail(coords, :bike)
   end
   
-  def find_nearest_avail_dock(coords)
+  def find_nearest_avail_dock(address)
+    coords = address_to_lat_lng(address)
     find_nearest_avail(coords, :dock)
   end
   
