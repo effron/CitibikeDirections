@@ -6,11 +6,14 @@ Gem::Specification.new do |s|
   s.description = 'Enter a start and end point, get full citibike directions to your destination'
   s.authors = ['Jin Park', 'Harris Effron']
   s.email = 'harris.effron@gmail.com'
-  s.files = ['lib/citi_bike_directions.rb']
+  s.files = ['lib/citi_bike_directions.rb',
+    'lib/citi_bike_directions/helper_methods.rb',
+    'lib/citi_bike_directions/distance_matrix_helper.rb']
   s.homepage = 'http://rubygems.org/gems/citi_bike_directions'
   s.license = 'MIT'
   s.add_dependency 'citibikenyc'
   s.add_dependency 'json'
-  s.add_dependency 'addressable/uri'
+  s.add_dependency 'addressable'
   s.add_dependency 'rest-client'
+  s.add_dependency 'geocoder'
 end
