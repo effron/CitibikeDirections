@@ -15,7 +15,7 @@ module DistanceMatrixHelper
     orig_str = coords.join(",")
     { destinations: dest_str, 
       origins:      orig_str, 
-      sensor:       false, 
+      sensor:       false,
       mode:         "walking" }    
   end
 

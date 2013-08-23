@@ -1,4 +1,5 @@
 module HelperMethods
+  
   def address_to_lat_lng(address)
     result = Geocoder.search(address)
     lat = result.first.data['geometry']['location']['lat']
@@ -6,4 +7,6 @@ module HelperMethods
 
     [lat, lng]
   end
+
 end
+

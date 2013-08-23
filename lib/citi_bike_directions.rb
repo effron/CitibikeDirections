@@ -5,10 +5,12 @@ require 'rest-client'
 require 'geocoder'
 require 'citi_bike_directions/helper_methods'
 require 'citi_bike_directions/distance_matrix_helper'
+require 'citi_bike_directions/gmaps_biking_directions'
 
 class CitiBikeDirections
   include HelperMethods
   include DistanceMatrixHelper
+  include GmapsBikingDirections
 
   attr_reader :client, :stations, :avail_bike_stations, :avail_dock_stations
 
@@ -38,6 +40,21 @@ class CitiBikeDirections
   def find_nearest_avail_dock(address)
     coords = address_to_lat_lng(address)
     find_nearest_avail(coords, :dock)
+  end
+
+  def find_total_directions(start_address, finish_address)
+    nearest_bike = find_nearest_avail_bike(start_address)
+    nearest_dock = find_nearest_avail_dock(finish_address)
+
+    walking_directions = get_walking_directions_with_waypoints(start_address, "#{nearest_bike['latitude']},#{nearest_bike['longitude']}", 
+      "#{nearest_dock['latitude']},#{nearest_dock['longitude']}", finish_address)
+    biking_directions = get_biking_directions("#{nearest_bike['latitude']},#{nearest_bike['longitude']}", 
+      "#{nearest_dock['latitude']},#{nearest_dock['longitude']}")
+
+    walking_directions[1] = biking_directions
+
+    walking_directions
+
   end
 
   private
