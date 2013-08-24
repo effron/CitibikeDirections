@@ -6,12 +6,14 @@ require 'geocoder'
 require 'citi_bike_directions/helper_methods'
 require 'citi_bike_directions/distance_matrix_helper'
 require 'citi_bike_directions/gmaps_biking_directions'
+require 'citi_bike_directions/gmaps_walking_directions'
 
 class CitiBikeDirections
   include HelperMethods
   include DistanceMatrixHelper
   include GmapsBikingDirections
-
+  include GmapsWalkingDirections
+  
   attr_reader :client, :stations, :avail_bike_stations, :avail_dock_stations
 
   def initialize(user_agent, availability_tolerance = 5)

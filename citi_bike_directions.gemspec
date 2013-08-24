@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = 'citi_bike_directions'
-  s.version = '0.0.0'
+  s.version = '0.0.2'
   s.date = '2013-08-21'
   s.summary = 'Get citibike directions with Google maps!'
   s.description = 'Enter a start and end point, get full citibike directions to your destination'
@@ -8,7 +8,9 @@ Gem::Specification.new do |s|
   s.email = 'harris.effron@gmail.com'
   s.files = ['lib/citi_bike_directions.rb',
     'lib/citi_bike_directions/helper_methods.rb',
-    'lib/citi_bike_directions/distance_matrix_helper.rb']
+    'lib/citi_bike_directions/distance_matrix_helper.rb',
+    'lib/citi_bike_directions/gmaps_biking_directions.rb',
+    'lib/citi_bike_directions/gmaps_walking_directions.rb']
   s.homepage = 'http://rubygems.org/gems/citi_bike_directions'
   s.license = 'MIT'
   s.add_dependency 'citibikenyc'
