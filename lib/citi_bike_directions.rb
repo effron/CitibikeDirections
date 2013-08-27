@@ -55,8 +55,7 @@ class CitiBikeDirections
 
     walking_directions[1] = biking_directions
 
-    walking_directions
-
+    walking_directions.to_json
   end
 
   private
