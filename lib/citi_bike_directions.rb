@@ -53,9 +53,8 @@ class CitiBikeDirections
     biking_directions = get_biking_directions("#{nearest_bike['latitude']},#{nearest_bike['longitude']}", 
       "#{nearest_dock['latitude']},#{nearest_dock['longitude']}")
 
-    walking_directions[1] = biking_directions
-
-    walking_directions.to_json
+    directions = [walking_directions[0]].concat(biking_directions) << (walking_directions[2])
+    directions.to_json
   end
 
   private

@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = 'citi_bike_directions'
-  s.version = '0.0.3'
+  s.version = '0.0.4'
   s.date = '2013-08-21'
   s.summary = 'Get citibike directions with Google maps!'
   s.description = 'Enter a start and end point, get full citibike directions to your destination'
