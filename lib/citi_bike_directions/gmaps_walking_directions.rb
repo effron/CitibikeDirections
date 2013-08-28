@@ -18,7 +18,7 @@ module GmapsWalkingDirections
 
     result = JSON.parse(RestClient.get(url))
 
-    result['routes'].first['legs']
+    result
   end
 
 end

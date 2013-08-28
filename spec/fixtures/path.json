@@ -1,0 +1,330 @@
+{
+                    "distance": {
+                        "text": "2.1 mi",
+                        "value": 3332
+                    },
+                    "duration": {
+                        "text": "16 mins",
+                        "value": 946
+                    },
+                    "end_address": "New York City Solicitation, New York, NY 10003, USA",
+                    "end_location": {
+                        "lat": 40.7324163,
+                        "lng": -73.9872912
+                    },
+                    "start_address": "Honorable Barrington D Parker, New York, NY 10007, USA",
+                    "start_location": {
+                        "lat": 40.7137379,
+                        "lng": -74.0086456
+                    },
+                    "steps": [
+                        {
+                            "distance": {
+                                "text": "52 ft",
+                                "value": 16
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 3
+                            },
+                            "end_location": {
+                                "lat": 40.7138072,
+                                "lng": -74.0088063
+                            },
+                            "html_instructions": "Head <b>northwest</b> on <b>Murray Street</b> toward <b>Church St</b>",
+                            "polyline": {
+                                "points": "{{nwF`yubMM^"
+                            },
+                            "start_location": {
+                                "lat": 40.7137379,
+                                "lng": -74.0086456
+                            },
+                            "travel_mode": "BICYCLING"
+                        },
+                        {
+                            "distance": {
+                                "text": "236 ft",
+                                "value": 72
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 39
+                            },
+                            "end_location": {
+                                "lat": 40.71436370000001,
+                                "lng": -74.00837589999999
+                            },
+                            "html_instructions": "Turn <b>right</b> onto <b>Church St</b>",
+                            "maneuver": "turn-right",
+                            "polyline": {
+                                "points": "i|nwF`zubMmBuA"
+                            },
+                            "start_location": {
+                                "lat": 40.7138072,
+                                "lng": -74.0088063
+                            },
+                            "travel_mode": "BICYCLING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.2 mi",
+                                "value": 398
+                            },
+                            "duration": {
+                                "text": "2 mins",
+                                "value": 124
+                            },
+                            "end_location": {
+                                "lat": 40.712436,
+                                "lng": -74.00456249999999
+                            },
+                            "html_instructions": "Turn <b>right</b> onto <b>Warren St</b>",
+                            "maneuver": "turn-right",
+                            "polyline": {
+                                "points": "w_owFjwubMBSBMhCgHRWf@}AJ[@EBCFEBCDIL_@BK@OBMBKh@wADEDAFAD?FAHEFEHK@G@C?E@G?E@E@A?G"
+                            },
+                            "start_location": {
+                                "lat": 40.71436370000001,
+                                "lng": -74.00837589999999
+                            },
+                            "travel_mode": "BICYCLING"
+                        },
+                        {
+                            "distance": {
+                                "text": "226 ft",
+                                "value": 69
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 13
+                            },
+                            "end_location": {
+                                "lat": 40.7129454,
+                                "lng": -74.0042295
+                            },
+                            "html_instructions": "Turn <b>left</b> onto <b>Brooklyn Bridge Promenade</b>",
+                            "maneuver": "turn-left",
+                            "polyline": {
+                                "points": "wsnwFn_ubMI?G?EAG?ECACAC@G]YECECSI"
+                            },
+                            "start_location": {
+                                "lat": 40.712436,
+                                "lng": -74.00456249999999
+                            },
+                            "travel_mode": "BICYCLING"
+                        },
+                        {
+                            "distance": {
+                                "text": "318 ft",
+                                "value": 97
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 19
+                            },
+                            "end_location": {
+                                "lat": 40.7136622,
+                                "lng": -74.003571
+                            },
+                            "html_instructions": "Merge onto <b>Centre St</b>",
+                            "maneuver": "merge",
+                            "polyline": {
+                                "points": "}vnwFl}tbMc@c@wAoAQO"
+                            },
+                            "start_location": {
+                                "lat": 40.7129454,
+                                "lng": -74.0042295
+                            },
+                            "travel_mode": "BICYCLING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.1 mi",
+                                "value": 213
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 51
+                            },
+                            "end_location": {
+                                "lat": 40.7151705,
+                                "lng": -74.0021222
+                            },
+                            "html_instructions": "Continue onto <b>Foley Square</b>",
+                            "polyline": {
+                                "points": "k{nwFhytbMO[MQIS]q@EKIISYEEKMKGQKSKu@[iAm@"
+                            },
+                            "start_location": {
+                                "lat": 40.7136622,
+                                "lng": -74.003571
+                            },
+                            "travel_mode": "BICYCLING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.5 mi",
+                                "value": 731
+                            },
+                            "duration": {
+                                "text": "3 mins",
+                                "value": 174
+                            },
+                            "end_location": {
+                                "lat": 40.7208068,
+                                "lng": -73.9976755
+                            },
+                            "html_instructions": "Continue onto <b>Centre St</b>",
+                            "polyline": {
+                                "points": "ydowFfptbMMKeBkAiFmDkCgBiA{@eCmBm@c@oDoC{DaDGEKC"
+                            },
+                            "start_location": {
+                                "lat": 40.7151705,
+                                "lng": -74.0021222
+                            },
+                            "travel_mode": "BICYCLING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.1 mi",
+                                "value": 169
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 73
+                            },
+                            "end_location": {
+                                "lat": 40.7222705,
+                                "lng": -73.9971417
+                            },
+                            "html_instructions": "Continue onto <b>Cleveland Pl</b>",
+                            "polyline": {
+                                "points": "ahpwFntsbMSIeBi@kCs@]C"
+                            },
+                            "start_location": {
+                                "lat": 40.7208068,
+                                "lng": -73.9976755
+                            },
+                            "travel_mode": "BICYCLING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.7 mi",
+                                "value": 1094
+                            },
+                            "duration": {
+                                "text": "5 mins",
+                                "value": 272
+                            },
+                            "end_location": {
+                                "lat": 40.7306512,
+                                "lng": -73.9905405
+                            },
+                            "html_instructions": "Continue onto <b>Lafayette St</b>",
+                            "polyline": {
+                                "points": "eqpwFbqsbMqEsAICGCECGESQMMgCmBGEKGy@o@]UWQMGSQUSWUsAcAQOMKs@e@y@k@QIQKqBwAmB{AcCmBs@e@UQMKq@i@k@e@KIKKe@c@GIEEKQOYUe@MMuAcAOKIQ"
+                            },
+                            "start_location": {
+                                "lat": 40.7222705,
+                                "lng": -73.9971417
+                            },
+                            "travel_mode": "BICYCLING"
+                        },
+                        {
+                            "distance": {
+                                "text": "223 ft",
+                                "value": 68
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 30
+                            },
+                            "end_location": {
+                                "lat": 40.7312538,
+                                "lng": -73.9903946
+                            },
+                            "html_instructions": "Slight <b>left</b> onto <b>4th Ave</b>",
+                            "maneuver": "turn-slight-left",
+                            "polyline": {
+                                "points": "qerwFzgrbMwB]"
+                            },
+                            "start_location": {
+                                "lat": 40.7306512,
+                                "lng": -73.9905405
+                            },
+                            "travel_mode": "BICYCLING"
+                        },
+                        {
+                            "distance": {
+                                "text": "417 ft",
+                                "value": 127
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 23
+                            },
+                            "end_location": {
+                                "lat": 40.73069690000001,
+                                "lng": -73.9890723
+                            },
+                            "html_instructions": "Turn <b>right</b> onto <b>E 10th St</b>",
+                            "maneuver": "turn-right",
+                            "polyline": {
+                                "points": "iirwF|frbMp@wBz@oC"
+                            },
+                            "start_location": {
+                                "lat": 40.7312538,
+                                "lng": -73.9903946
+                            },
+                            "travel_mode": "BICYCLING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.1 mi",
+                                "value": 240
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 75
+                            },
+                            "end_location": {
+                                "lat": 40.7325835,
+                                "lng": -73.98768869999999
+                            },
+                            "html_instructions": "Turn <b>left</b> onto <b>3rd Ave</b>",
+                            "maneuver": "turn-left",
+                            "polyline": {
+                                "points": "{erwFt~qbMyBuA_CcB}ByA"
+                            },
+                            "start_location": {
+                                "lat": 40.73069690000001,
+                                "lng": -73.9890723
+                            },
+                            "travel_mode": "BICYCLING"
+                        },
+                        {
+                            "distance": {
+                                "text": "125 ft",
+                                "value": 38
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 50
+                            },
+                            "end_location": {
+                                "lat": 40.7324163,
+                                "lng": -73.9872912
+                            },
+                            "html_instructions": "Turn <b>right</b> onto <b>E 13th St</b><div style=\"font-size:0.9em\">Walk your bicycle</div><div style=\"font-size:0.9em\">Destination will be on the right</div>",
+                            "maneuver": "turn-right",
+                            "polyline": {
+                                "points": "sqrwF`vqbM^oA"
+                            },
+                            "start_location": {
+                                "lat": 40.7325835,
+                                "lng": -73.98768869999999
+                            },
+                            "travel_mode": "BICYCLING"
+                        }
+                    ],
+                    "via_waypoint": []
+                }
