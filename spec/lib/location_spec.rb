@@ -8,20 +8,8 @@ describe Location do
                                  "location"=> { "lat"=> 40.7137379, "lng"=> -74.0086456 }}) }
 
   describe "#lat_lng" do
-    it "should return the path's lat and lng" do
-      location.lat_lng.should == [40.7137379, -74.0086456]
-    end
-  end
-
-  describe "#lat" do
-    it "should return lat" do
-      location.lat.should == 40.7137379
-    end
-  end
-
-  describe "#lng" do
-    it "should return lng" do
-      location.lng.should == -74.0086456
+    it "should return a LatLng object" do
+      location.lat_lng.should be_kind_of(LatLng)
     end
   end
 
