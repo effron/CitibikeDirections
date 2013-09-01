@@ -1,3 +1,5 @@
+require 'polylines'
+
 class Step
   attr_reader :distance, :duration, :start_location, :end_location,
                 :html_instructions, :maneuver, :polyline, :travel_mode

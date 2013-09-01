@@ -43,8 +43,8 @@ describe Step do
   end
 
   describe "#polyline" do
-    it "should return polyline" do
-      step.polyline.should == "{{nwF`yubMM^"
+    it "should return a decoded polyline" do
+      step.polyline.should ==  [[40.71374, -74.00865], [40.71381, -74.00881]] 
     end
   end
 

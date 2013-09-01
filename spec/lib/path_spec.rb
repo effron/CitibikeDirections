@@ -24,12 +24,20 @@ describe Path do
     end
   end
 
-
   describe "#end_location" do
     it "should be a location object" do
       path.end_location.should be_kind_of(Location)
     end
   end
 
+  describe "#steps" do
+    it "should be an array of step objects"
+  end
+
+  describe "#polyline" do
+    it "should return an array" do
+      path.polyline.should be_kind_of(Array)
+    end
+  end
 
 end

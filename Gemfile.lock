@@ -6,6 +6,7 @@ PATH
       citibikenyc
       geocoder
       json
+      polylines
       rest-client
 
 GEM
@@ -25,9 +26,10 @@ GEM
     geocoder (1.1.8)
     hashie (2.0.5)
     json (1.8.0)
-    mime-types (1.24)
+    mime-types (1.25)
     multi_json (1.7.9)
     multipart-post (1.2.0)
+    polylines (0.1.1)
     rest-client (1.6.7)
       mime-types (>= 1.16)
     rspec (2.14.1)
