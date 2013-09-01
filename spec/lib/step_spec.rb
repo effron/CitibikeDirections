@@ -43,8 +43,16 @@ describe Step do
   end
 
   describe "#polyline" do
-    it "should return a decoded polyline" do
-      step.polyline.should ==  [[40.71374, -74.00865], [40.71381, -74.00881]] 
+    it "should return an array" do
+      step.polyline.should be_kind_of(Array)
+    end
+    
+    it "should return an array of LatLng objects" do
+      step.polyline[0].should be_kind_of(LatLng)
+    end
+    
+    it "should return one LatLng object per pair of coordinates" do
+      step.polyline.length.should == 2
     end
   end
 

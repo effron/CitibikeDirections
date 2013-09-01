@@ -16,7 +16,9 @@ class Step
   end
 
   def decode_polyline(polyline)
-    Polylines::Decoder.decode_polyline(polyline)
+    Polylines::Decoder.decode_polyline(polyline).map do |coords|
+      LatLng.new({ "lat" => coords[0], "lng" => coords[1] })
+    end
   end
 
 end

@@ -31,7 +31,13 @@ describe Path do
   end
 
   describe "#steps" do
-    it "should be an array of step objects"
+    it "should be an array" do
+      path.steps.should be_kind_of(Array)
+    end
+    
+    it "should be an array of step objects" do
+      path.steps[0].should be_kind_of(Step)
+    end
   end
 
   describe "#polyline" do

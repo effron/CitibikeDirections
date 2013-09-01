@@ -1,5 +1,5 @@
 class Path
-  attr_reader :distance, :duration, :start_location, :end_location
+  attr_reader :distance, :duration, :start_location, :end_location, :steps
 
   def initialize(leg)
     @distance = leg['distance']['value']
