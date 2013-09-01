@@ -18,4 +18,5 @@ Gem::Specification.new do |s|
   s.add_dependency 'addressable'
   s.add_dependency 'rest-client'
   s.add_dependency 'geocoder'
+  s.add_dependency 'polylines'
 end
