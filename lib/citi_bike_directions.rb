@@ -8,7 +8,6 @@ require 'citi_bike_directions/helper_methods'
 require 'citi_bike_directions/distance_matrix_helper'
 require 'citi_bike_directions/gmaps_biking_directions'
 require 'citi_bike_directions/gmaps_walking_directions'
-require 'citi_bike_directions/path'
 
 class CitiBikeDirections
   include HelperMethods
